@@ -1,0 +1,88 @@
+1-react =>javascript library->UI=>frontend
+meta(facebook)2013
+2-Library = ready-made functions ka collection
+Jab aap chaho, tab aap library ko call karte ho.
+Control aapke haath me hota hai
+Example:
+JavaScript library: lodash, axios
+React is often called a library 
+structure-optional
+3-framework
+Framework = full structure / skeleton
+Framework aapko call karta hai, not the other way around.
+Control framework ke paas hota hai
+Example:Angular,Django,Spring Boot
+4-default export=>hum koi ek cheez export krte naam uss variable ka kuch bhi rakh sakte hain
+5-export arr =>{} se access krte h aur var name same hee likhna h ex-import {arr} from './file name'
+6-Real DOM = Browser ka actual DOM
+Ye HTML ka tree structure hota hai
+Browser isi DOM ko screen par dikhata hai
+Virtual DOM = Real DOM ka lightweight copy (JS object)
+React pehle Virtual DOM banata hai
+Ye memory me hota hai (browser me nahi)
+React ka Magic (Step by Step)
+Maan lo button click hua 
+️⃣ State change hui
+️⃣ React ne new Virtual DOM banaya
+️⃣ React ne old Virtual DOM se compare kiya
+(diffing)
+️Sirf changed part Real DOM me update hua
+Is process ko kehte hain:Reconciliation
+7-jsx=>HTML+JS
+REACT KO use a frame use krte h kyuki react ki ek library power limited hoti h frame m ek pura artitecture aha jata h 
+npm create vite
+vite=>bundlers => folders banana m help krta h
+8-React Project ka Flow
+index.html
+   ↓
+main.jsx
+   ↓
+App.jsx
+   ↓
+UI on Screen
+1️⃣ index.html (Root file)
+👉 Kya hota hai?
+index.html = browser ka entry point
+React ka UI isi file me inject hota hai.
+ex-<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+**Important baat:
+<div id="root"> = empty container
+React isi ke andar poora app render karta hai
+📌 index.html me React ka code nahi hota
+2-main.jsx 
+👉 Kya hota hai?
+main.jsx = React ko browser se connect karta hai
+Yahin React bolta hai:
+👉 “Is element ko is container me render karo”
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+ReactDOM.createRoot(document.getElementById("root"))
+  .render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+Samjho:
+createRoot() → root div pakadta hai
+<App /> → React ka main component
+3️⃣ App.jsx (Main Component)
+👉 Kya hota hai?
+App.jsx = actual UI yahin likhte hain
+Buttons, text, API call, state, props — sab yahin se start hota hai.
+Example:function App() {
+  return (
+    <h1>Hello React 🚀</h1>
+  );
+}
+
+export default App;
+👉 Jo yahan likha hai
+➡️ wahi browser me dikhega
+
+
+
