@@ -83,6 +83,10 @@ Example:function App() {
 export default App;
 👉 Jo yahan likha hai
 ➡️ wahi browser me dikhega
+🧩 React Fragment kya hota hai?
 
+9-Fragment = extra <div> ke bina multiple elements return karne ka tareeqa
 
+👉 React component sirf ek parent element return karta hai
+👉 Fragment is rule ko follow karte hue extra node add nahi karta
 
